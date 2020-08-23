@@ -18,7 +18,7 @@ https://platform.fatsecret.com/api/Default.aspx?screen=rapiref2&method=foods.sea
 Los elementos alimenticios devueltos son los que mejor coinciden con la expresión de búsqueda especificada, ordenados por su relevancia para la expresión de búsqueda.
 Con esta API recuperamos los ids de las comidas para poder usar la siguiente API y obtener los detalles nutricionales. 
 El código relacionado a esto se puede encontrar en la clase Food.java, el método getGeneralInfo itera por cada categoria de alimentos por los cuales se quiere recuperar información. se filtra solamente por alimentos genericos y se arma una lista de ids.
-Algo a tener en cuenta es que más allá de tres iteraciones en las categorias la API empieza a devolver null, no se aún el motivo, pero si se vuelve a intentar los datos son devueltos.
+Algo a tener en cuenta es que HAY QUE IMPLEMENTER HILOS,  e intentar mas de una vez las llamadas porque suele ser bloqueada la IP y devolver elementos nulos
 
 3) food.get.v2: Devuelve información nutricional detallada para el alimento especificado. Se utilizaron los ids obtenidos previamente para hacer uso de esta API
 https://platform.fatsecret.com/api/Default.aspx?screen=rapiref2&method=food.get.v2
